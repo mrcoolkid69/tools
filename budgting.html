@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <script src="budgting.js" defer></script>
+    <title>Tools</title>
+    <link rel="stylesheet" href="defaults.css" />
+    <style>
+        input {
+            min-width: 20%;
+            max-width: 70%;
+            display: block;
+            margin: auto;
+            background-color: #d3d3d3;
+            color: black;
+            border: #000000 solid 2px;
+            border-radius: 10px;
+            padding: 3px 5px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            filter: drop-shadow(3px 5px 3px #000000da);
+        }
+
+        .submit {
+            font-size: 16px;
+            font-family: 'Courier New', Courier, monospace;
+            margin: auto;
+            display: block;
+            font-weight: 900;
+            background-color: #ebebeb;
+            border: rgb(43, 43, 43) solid 2px;
+            border-radius: 10px;
+            padding: 1px 5px;
+            transition: 0.3s;
+        }
+
+        .submit:hover {
+            transform: translateY(-4px);
+            filter: drop-shadow(3px 5px 3px #000000da);
+            cursor: pointer;
+        }
+
+        .submit:active {
+            transform: translateY(0px);
+            filter: drop-shadow(0px 0px 0px #000000da);
+        }
+
+        .table {
+            font-size: 25px;
+            color: #3e3e3e;
+            width: fit-content;
+            margin: auto;
+            padding: 3px 5px;
+            border: gray 2px solid;
+            border-radius: 15px;
+            background-color: rgb(255, 255, 255);
+            background-image: url('paper.jpeg');
+            font-family: "Lucida Console", "Courier New", monospace;
+        }
+
+        .table,
+        td,
+        th {
+            border: 3px double gray;
+
+        }
+
+
+
+        td:empty {
+            display: none;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex: auto;
+            width: 70%;
+            margin: auto;
+        }
+
+        @media only screen and (max-width: 880px) {
+            .row {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            .row {
+                flex-direction: column !important;
+                flex: auto !important;
+            }
+
+        }
+
+        label,
+        .text {
+            background-color: #f3f3f3;
+            font-size: 20px;
+            color: black;
+            border-radius: 5px;
+            display: block;
+            margin: auto;
+            text-align: center;
+            width: 30%;
+            padding: 3px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="intreset.html">Interest Calculator</a>
+        <a href="budgting.html" class="active">Budgting Calculator</a>
+        <a href="textmirror.html">Text Mirror</a>
+    </nav>
+    <header>Budgting Calculator</header>
+    <br>
+    <label>Total Balance
+        <input type="number" id="budgting" value="100">
+    </label>
+    <br>
+    <form class="row">
+        <label>Needs %
+            <input type="number" id="needs" value="50">
+        </label>
+        <label>Wants %
+            <input type="number" id="wants" value="30">
+        </label>
+        <label>Savings %
+            <input type="number" id="saves" value="20">
+        </label>
+    </form>
+    <br>
+    <button class="submit" onclick="calcbudget()">Calculate</button>
+    <br>
+    <table class="output table">
+        <tr>
+            <th>Needs</th>
+            <th>Wants</th>
+            <th>Savings</th>
+        </tr>
+        <tr>
+            <td id="need"></td>
+            <td id="want"></td>
+            <td id="save"></td>
+        </tr>
+    </table>
+</body>
+
+</html>
