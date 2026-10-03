@@ -1,34 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="logo.png">
     <title>Tools</title>
-     <link rel="stylesheet" href="defaults.css" />
-     <script src="textmirror.js" defer></script>
+    <link rel="stylesheet" href="defaults.css" />
+    <script src="textmirror.js" defer></script>
 
-     <style>
-     input {
-            min-width: 20%;
-            max-width: 70%;
-            display: block;
-            margin: auto;
-            background-color: #6d6d6d;
-            color: white;
-            border: #000000 solid 2px;
-            border-radius: 10px;
-            padding: 3px 5px;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-
-        input:focus {
-            outline: none;
-            filter: drop-shadow(3px 5px 3px #000000da);
-        }
-
-
+    <style>
         .flip {
             text-align: center;
             background-image: url("paper.jpeg");
@@ -45,39 +26,24 @@
             font-size: 20px;
             font-weight: bold;
         }
-
-        .output {
-            text-align: center;
-            background-image: url("paper.jpeg");
-            max-width: 70%;
-            width: fit-content;
-            padding: 4px 10px;
-            border-radius: 15px;
-            height: auto;
-            color: black;
-            margin: auto;
-            font-family: sans-serif;
-            letter-spacing: 2px;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
     </style>
 </head>
+
 <body>
     <nav>
-        <a href = "index.html" >Home</a>
-        <a href = "intreset.html" >Interest Calculator</a>
-        <a href = "budgting.html" >Budgting Calculator</a>
-        <a href = "textmirror.html" class = "active">Text Mirror</a>
+        <a href="index.html">Home</a>
+        <a href="intreset.html">Interest Calculator</a>
+        <a href="budgting.html">Budgting Calculator</a>
+        <a href="textmirror.html" class="active">Text Mirror</a>
     </nav>
     <header>Text Mirror</header>
-        <input onchange="flip()" type="text" id="flipInput" value="Hello World">
-        <br>
-        <br>
-        <div class="output" id="flipNorm"></div>
-        <br>
-        <div class="flip" id="flipAns"></div>
-    
+    <input onchange="flip()" type="text" id="flipInput" value="Hello World" class="numbers">
+    <br>
+    <br>
+    <div class="math" id="flipNorm"></div>
+    <br>
+    <div class="math" id="flipAns"></div>
+
 </body>
+
 </html>

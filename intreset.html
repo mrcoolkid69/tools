@@ -8,91 +8,13 @@
     <title>Tools</title>
     <link rel="stylesheet" href="defaults.css" />
     <script src="interest.js" defer></script>
-    <style> 
-        .header {
-            font-size: 40px;
-            text-align: center;
-        }
+    <style>
 
         hr {
             width: 20%;
         }
-
-        .select {
-            width: fit-content;
-            display: block;
-            margin: auto;
-            border:2px black solid;
-            border-radius:6px;
-            font-size:20px;
-        }
-
-        .numbers {
-            width: 12%;
-            display: block;
-            margin: auto;
-            background-color: #f0f0f0;
-            color: black;
-            border: rgb(92, 92, 117) solid 2px;
-            border-radius: 10px;
-            padding: 3px 5px;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-
-        .numbers:focus {
-            outline: none;
-            border: #a2a2b8 solid 2px;
-            filter: drop-shadow(3px 5px 3px #000000da);
-        }
-
-        h2 {
-            text-align: center;
-        }
-
-        .submit {
-            font-size: 16px;
-            font-family: 'Courier New', Courier, monospace;
-            margin: auto;
-            display: block;
-            font-weight: 900;
-            background-color: #ebebeb;
-            border: rgb(43, 43, 43) solid 2px;
-            border-radius: 10px;
-            padding: 1px 5px;
-            transition: 0.3s;
-        }
-
-        .submit:hover {
-            transform: translateY(-4px);
-            filter: drop-shadow(3px 5px 3px #000000da);
-            cursor: pointer;
-        }
-
-        .submit:active {
-            transform: translateY(0px);
-            filter: drop-shadow(0px 0px 0px #000000da);
-        }
-
-        .math {
-            font-size: 20px;
-            color: #3e3e3e;
-            width: fit-content;
-            margin: auto;
-            padding: 3px 5px;
-            border: gray 2px solid;
-            border-radius: 15px;
-            background-color: rgb(255, 255, 255);
-            background-image: url('paper.jpeg');
-            font-family: "Lucida Console", "Courier New", monospace;
-        }
-
-        .math th,
-        td {
-            border: 3px double gray;
-            text-align: center;
-            border-radius: 10px/16px;
-            padding: 0px 4px;
+        .adv {
+            display: none;
         }
     </style>
 </head>
@@ -120,16 +42,28 @@
         <input class="numbers" type="number" id="rte" name="number" step="0.01" value="5">
     </div>
     <hr>
-    <h2>Years</h2>
+    <h2 id="tableTime">Years</h2>
     <input class="numbers" type="number" id="time" name="number" min="1" max="10000" value="5">
-
+    <br>
+    <h2 class="adv">Time Increments</h2>
+    <select class="select adv" id="advtime" onchange="timeChanged()">
+        <option value="Year">Years</option>
+        <option value="Month">Months</option>
+        <option value="Day">Days</option>
+    </select>
+    <br>
+    <h2 class="adv">Add per <span id="addedPer">Year</span></h2>
+    <input class="numbers adv" type="number" id="addedPerMonth" name="number" min="1" max="10000" value="1" onchange="addPerMonthChange()">
+    <br>
+    <button onclick="advance()" class="submit">Advance tools</button>
     <br>
     <button class="submit" onclick="calculate()">Calculate</button>
     <br>
+
     <br>
     <table id="money" class="math">
         <tr>
-            <th>Year</th>
+            <th id="tableTime">Years</th>
             <th>Interest</th>
             <th>Total Amount</th>
         </tr>
