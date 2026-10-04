@@ -74,7 +74,7 @@ function calculate() {
     }
     if (time > 1000) {
         alert("Max years is 1000");
-    } else {
+    } else { 
         document.getElementById("money").innerHTML = "";
         if (type == "simple") {
             let rte = document.getElementById("rte").valueAsNumber;

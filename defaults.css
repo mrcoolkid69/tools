@@ -57,8 +57,7 @@ nav a:not(.active):hover {
     font-size: 20px;
     transition: 0.3s;
 }
-
-.select:hover {
+.select:hover{
     filter: drop-shadow(3px 5px 3px #000000da);
     border-radius: 8px;
 }
@@ -68,11 +67,9 @@ nav a:not(.active):hover {
     border-radius: 10px;
 }
 
- 
+
 .numbers {
-    field-sizing: content;
-    min-width: 20%;
-    max-width: 100%;
+    width: 12%;
     display: block;
     margin: auto;
     background-color: #f0f0f0;
@@ -122,7 +119,7 @@ h2 {
     font-size: 20px;
     color: #3e3e3e;
     width: fit-content;
-    margin: auto auto 40px auto;
+    margin: auto auto 40px auto; 
     padding: 3px 5px;
     border: gray 2px solid;
     border-radius: 15px;
