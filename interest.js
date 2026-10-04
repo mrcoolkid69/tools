@@ -72,9 +72,9 @@ function calculate() {
     } else {
         perMonth = document.getElementById("addedPerMonth").valueAsNumber;
     }
-    if (time >= 1000) {
-        alert("Yo");
-    } else {
+    if (time > 1000) {
+        alert("Max years is 1000");
+    } else { 
         document.getElementById("money").innerHTML = "";
         if (type == "simple") {
             let rte = document.getElementById("rte").valueAsNumber;
