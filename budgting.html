@@ -9,7 +9,6 @@
     <title>Tools</title>
     <link rel="stylesheet" href="defaults.css" />
     <style>
-
         .row {
             display: flex;
             flex-direction: row;
@@ -44,6 +43,13 @@
             width: 30%;
             padding: 3px 5px;
         }
+
+        .math *:not(span) {
+            border: 3px double gray;
+            text-align: center;
+            border-radius: 10px/16px;
+            padding: 0px 4px;
+        }
     </style>
 </head>
 
@@ -60,7 +66,7 @@
     <label>Total Balance
         <input class="numbers" type="number" id="budgting" value="100" min="0" max="999999999">
     </label>
-    <br> 
+    <br>
     <form class="row">
         <label>Needs %
             <input class="numbers" type="number" id="needs" value="50" min="0" max="100">

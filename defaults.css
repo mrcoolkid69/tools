@@ -130,13 +130,6 @@ h2 {
     font-family: "Lucida Console", "Courier New", monospace;
 }
 
-.math *:not(span) {
-    border: 3px double gray;
-    text-align: center;
-    border-radius: 10px/16px;
-    padding: 0px 4px;
-}
-
 .math tr:nth-child(even) {
     background-color: #b3b3b30e;
 }
