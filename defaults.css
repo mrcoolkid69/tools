@@ -69,8 +69,9 @@ nav a:not(.active):hover {
 
 
 .numbers {
-    
+    word-break: break-word;
     min-width: 12%;
+    max-width: 95%;
     display: block; 
     field-sizing: content;
     margin: auto;
@@ -118,8 +119,9 @@ h2 {
 }
 
 .math {
+    word-break:break-all;
     font-size: 20px;
-    color: #3e3e3e;
+    color: #303030;
     width: fit-content;
     margin: auto auto 40px auto; 
     padding: 3px 5px;

@@ -39,7 +39,7 @@ function getData(type) {
             while (arrayText[i] != keyboardCharacters[index]) {
                 index++;
                 if (index > 95) {
-                    break;
+                    continue;
                 }
             }
             keyboardTranslate.push(index);
@@ -50,7 +50,7 @@ function getData(type) {
             while (arrayText[i] != scrambledCharacters[index]) {
                 index++;
                 if (index > 95) {
-                    break;
+                    continue;
                 }
             }
             keyboardTranslate.push(index);
