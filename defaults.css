@@ -69,8 +69,10 @@ nav a:not(.active):hover {
 
 
 .numbers {
-    width: 12%;
-    display: block;
+    
+    min-width: 12%;
+    display: block; 
+    field-sizing: content;
     margin: auto;
     background-color: #f0f0f0;
     color: black;
@@ -143,5 +145,8 @@ h2 {
     nav {
         flex-direction: column;
         gap: 0;
+    }
+    .numbers{
+        width:50%;
     }
 }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap" rel="stylesheet">
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encoder</title>
+    <meta name="description" content="Encoder tool">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="defaults.css">
+    <script src="encoder.js" defer></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" >Home</a>
+        <a href="intereset.html">Interest Calculator</a>
+        <a href="budgting.html">Budgting Calculator</a>
+        <a href="textmirror.html">Text Mirror</a>
+        <a href="encoder.html" class="active">Encoder</a>
+    </nav>
+    <header>Encoder</header>
+    <select id="type" class="select">
+        <option value="encode">Encode</option>
+        <option value="decode">Decode</option>
+    </select>
+    <br>
+    <input id="code" type="number" class="numbers" placeholder="Enter Code">
+    <br>
+    <input id="text" type="text" class="numbers" placeholder="Enter text here" value="text">
+    <br>
+    <button class="submit" id="submit" onclick="runEncryption()">Submit</button>
+    <br>
+    <p class="math" id="output"></p>
+    <footer>
+    </footer>
+
+</body>
+
+</html>
