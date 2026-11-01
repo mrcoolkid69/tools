@@ -136,7 +136,7 @@ h2 {
     background-color: #b3b3b30e;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:810px) {
     nav {
         flex-direction: column;
         gap: 0;
