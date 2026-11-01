@@ -3,15 +3,18 @@
 let timeAmount = "Year";
 
 function addPerMonth(perMonth) {
-    if (perMonth != 0) {
+    if (perMonth != 0 && isNaN(perMonth) !== true) {
         return `<span style ="color:green">+ ${perMonth.toLocaleString(undefined, { style: "currency", currency: "USD" })}</span>`;
     }else{
         return "";
     }
-
+ 
 }
 
 function compoundInterest(p, r, t, mnth) {
+    if(isNaN(mnth)){
+        mnth = 0;
+    }
     let res = `<tr>
     <th id = "tableTime">${timeAmount+ "s"}</th>
     <th>Interest</th>
@@ -26,6 +29,9 @@ function compoundInterest(p, r, t, mnth) {
     return res;
 }
 function simpleInterest(p, r, t, mnth) {
+    if(isNaN(mnth)){
+        mnth = 0;
+    }
     let rate = p * r;
     let res = `<tr>
     <th id = "tableTime">${timeAmount+ "s"}</th>
