@@ -3,10 +3,23 @@ body {
     background: linear-gradient(to right, #8a8989, #ffffff);
 }
 
+@keyframes fadeIn {
+    from { opacity: 0;transform: translateY(20px); }
+    to { opacity: 1;transform: translateY(0); }
+}
+
+
 header {
     font-size: max(2rem, 4vw);
     text-align: center;
     font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h2 {
+    text-align: center;
+    animation: fadeIn 1s ease-in-out 0.5s both;
+
 }
 
 nav {
@@ -90,9 +103,7 @@ nav a:not(.active):hover {
     filter: drop-shadow(3px 5px 3px #000000da);
 }
 
-h2 {
-    text-align: center;
-}
+
 
 .submit {
     font-size: 16px;
