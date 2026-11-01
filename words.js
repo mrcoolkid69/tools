@@ -27,7 +27,6 @@ function displayWords(words){
     let wordShow = document.getElementById("wordShowing").valueAsNumber;
     if(isNaN(wordShow)){
         wordShow = 50;
-        console.log("Yooooo");
     }
     wordList.innerHTML = "";
     for(let i = 0; i < wordShow;i++){
